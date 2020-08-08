@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: morphic-community-manager
+  labels:
+    app: morphic-community-manager
+  annotations:
+    reloader.stakater.com/auto: "true"
+spec:
+  revisionHistoryLimit: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      app: morphic-community-manager
+  template:
+    metadata:
+      labels:
+        app: morphic-community-manager
+      annotations:
+        # @TODO add metrics
+        prometheus.io/scrape: "false"
+        prometheus.io/path: "/metrics"
+        prometheus.io/port: "80"
+    spec:
+      containers:
+      - name: morphic-community-manager
+        image: morphicworld/morphic-community-web:stable
+        livenessProbe:
+          httpGet:
+            path: /index
+            port: 80
+          initialDelaySeconds: 3
+          periodSeconds: 30
+          timeoutSeconds: 2
+          failureThreshold: 4
+          successThreshold: 1
+        readinessProbe:
+          httpGet:
+            path: /index
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 30
+          timeoutSeconds: 2
+          failureThreshold: 4
+          successThreshold: 2
+        ports:
+        - name: http
+          containerPort: 80
+        env: []
+        resources:
+          requests:
+            cpu: "0.1"
+            memory: "150Mi"
+          limits:
+            cpu: "1"
+            memory: "150Mi"

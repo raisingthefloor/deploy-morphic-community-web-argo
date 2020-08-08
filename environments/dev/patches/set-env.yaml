@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: morphic-community-manager
+spec:
+  template:
+    spec:
+      containers:
+      - name: morphic-community-manager
+        env:
+          - name: MORPHIC_SERVER_URL
+            value: "https://dev-morphic.morphiclite-oregondesignservices.org/"
