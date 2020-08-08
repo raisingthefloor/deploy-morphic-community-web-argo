@@ -36,7 +36,7 @@ spec:
           successThreshold: 1
         readinessProbe:
           httpGet:
-            path: /index
+            path: /index.html
             port: 80
           initialDelaySeconds: 5
           periodSeconds: 30
