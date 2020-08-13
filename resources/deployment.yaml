@@ -27,7 +27,7 @@ spec:
         image: morphicworld/morphic-community-web:stable
         livenessProbe:
           httpGet:
-            path: /index
+            path: /
             port: 80
           initialDelaySeconds: 3
           periodSeconds: 30
@@ -36,7 +36,7 @@ spec:
           successThreshold: 1
         readinessProbe:
           httpGet:
-            path: /index.html
+            path: /
             port: 80
           initialDelaySeconds: 5
           periodSeconds: 30
