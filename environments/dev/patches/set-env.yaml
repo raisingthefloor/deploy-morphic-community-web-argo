@@ -9,4 +9,4 @@ spec:
       - name: morphic-community-manager
         env:
           - name: MORPHIC_SERVER_URL
-            value: "https://dev-morphic.morphiclite-oregondesignservices.org/"
+            value: "https://dev-api-experimental.morphiclite-oregondesignservices.org/"
