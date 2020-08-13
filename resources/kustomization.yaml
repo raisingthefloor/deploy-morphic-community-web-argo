@@ -6,4 +6,5 @@ resources:
 - service.yaml
 images:
 - name: morphicworld/morphic-community-web
-  newTag: 2020.8.7.5
+  newName: morphicworld/morphic-community-web
+  newTag: 2020.8.13.6
