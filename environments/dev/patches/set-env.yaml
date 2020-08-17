@@ -10,3 +10,7 @@ spec:
         env:
           - name: MORPHIC_SERVER_URL
             value: "https://dev-api-experimental.morphiclite-oregondesignservices.org/"
+          - name: STRIPE_PUBLIC_KEY
+            value: ""
+          - name: PASSWORD_FRONT_END_URL
+            value: "https://dev-ui.morphiclite-oregondesignservices.org"
