@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: external
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
     # I have no idea what to set this to!
-    nginx.ingress.kubernetes.io/limit-rps: "20"
+    nginx.ingress.kubernetes.io/limit-rps: "400"
 spec:
   tls:
   - hosts:
