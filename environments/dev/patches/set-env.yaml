@@ -11,6 +11,6 @@ spec:
           - name: MORPHIC_SERVER_URL
             value: "https://dev-morphic.morphiclite-oregondesignservices.org/"
           - name: STRIPE_PUBLIC_KEY
-            value: ""
+            value: "pk_test_51Gvm7ZFNS9zyw2T7RQNPwn9ckpAntJZaJauCH3TAbi3uywRWuuZelwRWu1EzeAu0feIbDZNBWLaL7z6utN2syGDl00m1R2iOF9"
           - name: PASSWORD_FRONT_END_URL
             value: "https://dev-ui.morphiclite-oregondesignservices.org"
