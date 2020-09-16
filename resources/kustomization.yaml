@@ -7,4 +7,4 @@ resources:
 images:
 - name: morphicworld/morphic-community-web
   newName: morphicworld/morphic-community-web
-  newTag: 2020.9.16.1
+  newTag: 2020.9.16.3
