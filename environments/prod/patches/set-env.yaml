@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: morphic-community-manager
+spec:
+  # also bump up replicas
+  replicas: 2
+
+  template:
+    spec:
+      containers:
+      - name: morphic-community-manager
+        env:
+          - name: MORPHIC_SERVER_URL
+            value: "https://api.morphic.org/"
+          - name: STRIPE_PUBLIC_KEY
+            value: "pk_live_51Gvm7ZFNS9zyw2T7Rcxccj4GjheU8MZgre9rswkIZMd6x0rzsoD1gBMKy2P2pnEXut11dsg8eICIE708TuBYisgd00kMGP7SnY"
+          - name: PASSWORD_FRONT_END_URL
+            value: "https://app.morphic.org"
