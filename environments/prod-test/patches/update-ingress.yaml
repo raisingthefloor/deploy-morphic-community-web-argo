@@ -5,10 +5,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - community.morphic.org
+        - community.morphic-prod-test.org
       secretName: morphic-community-manager-tls
   rules:
-    - host: community.morphic.org
+    - host: community.morphic-prod-test.org
       http:
         paths:
           - backend:
