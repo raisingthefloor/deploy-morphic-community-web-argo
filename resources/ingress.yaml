@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - dev-communitymanager.morphiclite-oregondesignservices.org
+    - dev-communitymanager.morphic.dev
     secretName: morphic-community-manager-tls
   rules:
-  - host: dev-communitymanager.morphiclite-oregondesignservices.org
+  - host: dev-communitymanager.morphic.dev
     http:
       paths:
       - backend:

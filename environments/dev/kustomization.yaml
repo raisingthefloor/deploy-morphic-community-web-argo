@@ -4,3 +4,4 @@ resources:
 - ../../resources/
 patchesStrategicMerge:
 - patches/set-env.yaml
+- patches/update-ingress.yaml
