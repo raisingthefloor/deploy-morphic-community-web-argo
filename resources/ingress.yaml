@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: morphic-community
+  name: morphic-community-manager
   annotations:
     kubernetes.io/ingress.class: external
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
@@ -10,13 +10,13 @@ metadata:
 spec:
   tls:
   - hosts:
-    - dev-community.morphic.dev
-    secretName: morphic-community-tls
+    - dev-communitymanager.morphic.dev
+    secretName: morphic-community-manager-tls
   rules:
-  - host: dev-community.morphic.dev
+  - host: dev-communitymanager.morphic.dev
     http:
       paths:
       - backend:
-          serviceName: morphic-community
+          serviceName: morphic-community-manager
           servicePort: http
         path: /

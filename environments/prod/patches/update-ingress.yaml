@@ -1,17 +1,17 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: morphic-community
+  name: morphic-community-manager
 spec:
   tls:
     - hosts:
         - community.morphic.org
-      secretName: morphic-community-tls
+      secretName: morphic-community-manager-tls
   rules:
     - host: community.morphic.org
       http:
         paths:
           - backend:
-              serviceName: morphic-community
+              serviceName: morphic-community-manager
               servicePort: http
             path: /
