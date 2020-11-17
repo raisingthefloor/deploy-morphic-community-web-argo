@@ -25,6 +25,7 @@ kind: Deployment
 metadata:
   name: morphic-community-v10
 spec:
+  replicas: 2
   template:
     spec:
       containers:
@@ -33,7 +34,7 @@ spec:
           - name: SERVICE_URL
             value: "https://api.morphic.org/"
           - name: RECAPTCHA_KEY
-            value: "6Lc1hfsUAAAAAGFReCJUUva4LHF30XG5pIoJr2Nl"
+            value: "6LcuEM0ZAAAAABafZkUPUBAAcj5BNw2rd3fuNMC2"
           - name: MORPHIC_SERVER_URL
             value: "https://api.morphic.org/"
           - name: STRIPE_PUBLIC_KEY
