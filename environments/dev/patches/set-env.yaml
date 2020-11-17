@@ -1,13 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: morphic-community-manager
+  name: morphic-community
 spec:
   template:
     spec:
       containers:
-      - name: morphic-community-manager
+      - name: morphic-community
         env:
+          - name: SERVICE_URL
+            value: "https://api.morphic.dev/"
+          - name: RECAPTCHA_KEY
+            value: "6Lc1hfsUAAAAAGFReCJUUva4LHF30XG5pIoJr2Nl"
           - name: MORPHIC_SERVER_URL
             value: "https://api.morphic.dev/"
           - name: STRIPE_PUBLIC_KEY

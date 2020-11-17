@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: morphic-community-manager
+  name: morphic-community
 spec:
   type: ClusterIP
   selector:
-    app: morphic-community-manager
+    app: morphic-community
   ports:
     - name: http
       protocol: TCP

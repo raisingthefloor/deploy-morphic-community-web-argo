@@ -5,6 +5,6 @@ resources:
 - ingress.yaml
 - service.yaml
 images:
-- name: morphicworld/morphic-community-web
-  newName: morphicworld/morphic-community-web
-  newTag: 2020.9.16.3
+- name: morphicworld/morphiccommunity
+  newName: morphicworld/morphiccommunity
+  newTag: stable-20200930.32
