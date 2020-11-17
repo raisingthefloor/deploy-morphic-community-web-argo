@@ -1,13 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: morphic-community-manager
+  name: morphic-community-v09
 spec:
   template:
     spec:
       containers:
-      - name: morphic-community-manager
+      - name: morphic-community-v09
         env:
+          - name: MORPHIC_SERVER_URL
+            value: "https://api.morphic.dev/"
+          - name: STRIPE_PUBLIC_KEY
+            value: "pk_test_51Gvm7ZFNS9zyw2T7RQNPwn9ckpAntJZaJauCH3TAbi3uywRWuuZelwRWu1EzeAu0feIbDZNBWLaL7z6utN2syGDl00m1R2iOF9"
+          - name: PASSWORD_FRONT_END_URL
+            value: "https://app.morphic.dev"
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: morphic-community-v10
+spec:
+  template:
+    spec:
+      containers:
+      - name: morphic-community-v10
+        env:
+          - name: SERVICE_URL
+            value: "https://api.morphic.dev/"
+          - name: RECAPTCHA_KEY
+            value: "6Lc1hfsUAAAAAGFReCJUUva4LHF30XG5pIoJr2Nl"
           - name: MORPHIC_SERVER_URL
             value: "https://api.morphic.dev/"
           - name: STRIPE_PUBLIC_KEY
