@@ -25,10 +25,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - communitynew.morphic-staging.com
+        - custom.morphic-staging.com
       secretName: morphic-community-v10-tls
   rules:
-    - host: communitynew.morphic-staging.com
+    - host: custom.morphic-staging.com
       http:
         paths:
           - backend:
