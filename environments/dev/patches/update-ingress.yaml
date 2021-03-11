@@ -25,10 +25,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - communitynew.morphic.dev
+        - custom.morphic.dev
       secretName: morphic-community-v10-tls
   rules:
-    - host: communitynew.morphic.dev
+    - host: custom.morphic.dev
       http:
         paths:
           - backend:
