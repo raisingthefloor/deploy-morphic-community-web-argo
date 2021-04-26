@@ -7,4 +7,4 @@ resources:
 images:
 - name: morphicworld/morphiccommunity
   newName: morphicworld/morphiccommunity
-  newTag: stable-20210424.3
+  newTag: stable-20210426.2
